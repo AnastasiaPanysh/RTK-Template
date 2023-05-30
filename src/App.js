@@ -1,14 +1,16 @@
-import Counter from "./Page/Counter";
-import Math from "./Page/Math";
-import Valid from "./Page/Valid";
+import Calculator from "./Components/Calculator";
+import Counter from "./Components/Counter";
+import Math from "./Components/Math";
+import Valid from "./Components/Valid";
 
 function App() {
 
   return (
     <>
-      <Counter></Counter>
-      <Math></Math>
-      <Valid></Valid>
+        <Counter></Counter>
+        <Math></Math>
+        <Valid></Valid>
+        <Calculator></Calculator>
     </>
   );
 }
