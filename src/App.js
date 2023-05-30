@@ -1,5 +1,6 @@
 import Counter from "./Page/Counter";
 import Math from "./Page/Math";
+import Valid from "./Page/Valid";
 
 function App() {
 
@@ -7,6 +8,7 @@ function App() {
     <>
       <Counter></Counter>
       <Math></Math>
+      <Valid></Valid>
     </>
   );
 }
