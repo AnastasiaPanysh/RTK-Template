@@ -18,14 +18,18 @@ const styles = {
 }
 
 function Theme() {
-    const [isDark, setIsDark] = useState(false)
-    function change() {
-        setIsDark(!isDark)
-    }
+    const setTheme = useSelector(state => state.theme.value)
+    const dispatch = useDispatch()
+
+
+    // const [isDark, setIsDark] = useState(false)
+    // function change() {
+    //     setIsDark(!isDark)
+    // }
 
     return (
         <div style={styles[isDark ? 'dark' : 'light']}>
-            <button onClick={change}>поменять тему</button>
+            <button onClick={dispatch(setTheme())}>поменять тему</button>
         </div>
     )
 }
