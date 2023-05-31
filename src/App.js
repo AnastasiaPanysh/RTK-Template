@@ -1,8 +1,8 @@
-import Calculator from "./Components/Calculator";
 import Counter from "./Components/Counter";
 import Math from "./Components/Math";
-import Theme from "./Components/Theme";
 import Valid from "./Components/Valid";
+import Calculator from "./Components/Calculator";
+import Theme from "./Components/Theme";
 
 function App() {
 

@@ -1,6 +1,11 @@
-import { useState } from "react"
+// import { useState } from "react"
+import { useDispatch, useSelector } from "react-redux";
+import { change } from "../slice/themeSlice";
 
 const styles = {
+    h: {
+        textAlign: 'center'
+    },
     dark: {
         margin: '3% auto',
         width: '800px',
@@ -18,19 +23,16 @@ const styles = {
 }
 
 function Theme() {
-    const setTheme = useSelector(state => state.theme.value)
+    const bool = useSelector(state => state.theme.value)
     const dispatch = useDispatch()
 
-
-    // const [isDark, setIsDark] = useState(false)
-    // function change() {
-    //     setIsDark(!isDark)
-    // }
-
     return (
-        <div style={styles[isDark ? 'dark' : 'light']}>
-            <button onClick={dispatch(setTheme())}>поменять тему</button>
-        </div>
+        <>
+            <h1 style={styles.h}>THEME</h1>
+            <div style={styles[bool ? 'dark' : 'light']}>
+                <button onClick={() => dispatch(change())}>поменять тему</button>
+            </div>
+        </>
     )
 }
 
